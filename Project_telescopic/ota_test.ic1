@@ -1,7 +1,7 @@
 * "simulator" "HSPICE" 
 * "version" "A-2007.09"
 * "format" "HSP"
-* "rundate" "10:07:50 06/17/2018 "
+* "rundate" "10:50:53 06/17/2018 "
 * "netlist" "d:\seafile\大三下学期\模拟集成电路\project_telescopic\ota_test.sp "
 * "runtitle" "* ee214 design project"
 * time =    0.            
@@ -11,37 +11,37 @@
 + gmindc=   1.0000p       
 .nodeset
 + vdd =   3.0000        
-+ voc =   1.5018        
-+ vod = 132.7827f       
-+ vom =   1.5018        
-+ vomm =   1.5018        
-+ vop =   1.5018        
-+ vopp =   1.5018        
-+ vsc =   1.5000        
++ voc =   1.5040        
++ vod =   1.2044p       
++ vom =   1.5040        
++ vomm =   1.5040        
++ vop =   1.5040        
++ vopp =   1.5040        
++ vsc =   1.1000        
 + vsd =   0.            
-+ vsm =   1.5000        
-+ vsp =   1.5000        
-+ xm =   1.5000        
-+ xp =   1.5000        
-+ ym =   1.5000        
-+ yp =   1.5000        
-+ x1.p = 543.5121m       
-+ x1.pb =   2.4638        
-+ x1.pc =   2.4607        
-+ x1.pd =   2.4626        
-+ x1.pe =   2.4607        
-+ x1.pf = 795.3854m       
-+ x1.pg = 795.3854m       
-+ x1.ph = 735.9945m       
++ vsm =   1.1000        
++ vsp =   1.1000        
++ xm =   1.1000        
++ xp =   1.1000        
++ ym =   1.1000        
++ yp =   1.1000        
++ x1.p = 265.5484m       
++ x1.pb =   2.5403        
++ x1.pc =   2.5358        
++ x1.pd =   2.5357        
++ x1.pe =   2.5358        
++ x1.pf = 648.8839m       
++ x1.pg = 648.8839m       
++ x1.ph = 660.9098m       
 + x1.pib = 790.4653m       
-+ x1.vbb1 =   1.0603        
-+ x1.vbb2 =   1.6430        
-+ x1.vbias =   1.7119        
-+ x1.vid = 132.7827f       
-+ x1.voc =   1.5018        
++ x1.vbb1 =   1.2550        
++ x1.vbb2 =   1.5017        
++ x1.vbias =   1.8042        
++ x1.vid =   1.2044p       
++ x1.voc =   1.5040        
 + x1.vocdes =   1.5000        
-+ xs.vminv =  -1.5018        
-+ xt.middlem =   1.5000        
-+ xt.middlep =   1.5000        
-+ x1.x1.vminv =  -1.5018        
++ xs.vminv =  -1.5040        
++ xt.middlem =   1.1000        
++ xt.middlep =   1.1000        
++ x1.x1.vminv =  -1.5040        
 ***   END: Saved Operating Point ***                     

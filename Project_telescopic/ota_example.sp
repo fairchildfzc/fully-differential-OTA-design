@@ -10,7 +10,7 @@
 .param cl=2p
 .param cf=2p
 * input common mode
-.param input_common=1.5
+.param input_common=1.1
 
 * differential input voltage step
 .param input_diff=0.5
@@ -39,14 +39,14 @@ m03 vbias pib 0 0 nch214 w=28um l=0.6um M=5
 *4th Branch
 m3 pc vbias vdd vdd pch214 w=28um l=0.7um M=5
 m3a vop vbb1 pc vdd pch214 w=28um l=0.7um M=5
-m1a vop vbb2 pf 0 nch214 w=28um l=0.4um M=20
+m1a vop vbb2 pf 0 nch214 w=28um l=0.4um M=10
 m1 pf vim p 0 nch214 w=28um l=0.4um M=5
 
 *5th Branch
 mbb4 pd vbias vdd vdd pch214 w=28um l=0.7um M=2
 mbb2 vbb2 vbb1 pd vdd pch214 w=28um l=0.7um M=2
 mb2 vbb2 vbb2 ph 0 nch214 w=28um l=0.4um M=5
-mb1 ph vbb2 p 0 nch214 w=28um l=0.4um
+mb1 ph vbb2 p 0 nch214 w=7um l=0.4um
 m0 p pib 0 0 nch214 w=28um l=0.6um M=12
 *Vbb2 vbb2 0 0.6
 *VP P 0 0.3
@@ -54,7 +54,7 @@ m0 p pib 0 0 nch214 w=28um l=0.6um M=12
 *6th Branch
 m4 pe vbias vdd vdd pch214 w=28um l=0.7um M=5
 m4a vom vbb1 pe vdd pch214 w=28um l=0.7um M=5
-m2a vom vbb2 pg 0 nch214 w=28um l=0.4um M=20
+m2a vom vbb2 pg 0 nch214 w=28um l=0.4um M=10
 m2 pg vip p 0 nch214 w=28um l=0.4um M=5
 
 *2rd Stage

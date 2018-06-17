@@ -1,4 +1,4 @@
- ****** HSPICE  --  A-2007.09  32-BIT    (Aug 28 2007) 10:07:50 06/17/2018 winnt
+ ****** HSPICE  --  A-2007.09  32-BIT    (Aug 28 2007) 10:54:10 06/17/2018 winnt
   Copyright (C) 2007 Synopsys, Inc. All Rights Reserved.                        
   Unpublished-rights reserved under US copyright laws.
   This program is protected by law and is subject to the 
@@ -69,7 +69,7 @@
  .param cl=2p
  .param cf=2p
  * input common mode
- .param input_common=1.5
+ .param input_common=1.1
 
  * differential input voltage step
  .param input_diff=0.5
@@ -86,44 +86,44 @@
  m01 pib pib 0 0 nch214 w=28um l=0.6um
 
  *2nd branch
- *mbb3 pa vbb1 vdd vdd pch214 w=140um l=0.9um
- mbb1 vbb1 vbb1 vdd vdd pch214 w=28um l=0.9um
+ *mbb3 pa vbb1 vdd vdd pch214 w=140um l=0.7um
+ mbb1 vbb1 vbb1 vdd vdd pch214 w=28um l=0.7um
  m02 vbb1 pib 0 0 nch214 w=28um l=0.6um m=5
 
  *3rd branch
- mc2 pb vbias vdd vdd pch214 w=28um l=0.9um m=5
- mc1 vbias vbb1 pb vdd pch214 w=28um l=0.9um m=5
+ mc2 pb vbias vdd vdd pch214 w=28um l=0.7um m=5
+ mc1 vbias vbb1 pb vdd pch214 w=28um l=0.7um m=5
  m03 vbias pib 0 0 nch214 w=28um l=0.6um m=5
 
  *4th branch
- m3 pc vbias vdd vdd pch214 w=28um l=0.9um m=5
- m3a vop vbb1 pc vdd pch214 w=28um l=0.9um m=5
- m1a vop vbb2 pf 0 nch214 w=28um l=0.65um m=40
- m1 pf vim p 0 nch214 w=28um l=0.65um m=5
+ m3 pc vbias vdd vdd pch214 w=28um l=0.7um m=5
+ m3a vop vbb1 pc vdd pch214 w=28um l=0.7um m=5
+ m1a vop vbb2 pf 0 nch214 w=28um l=0.4um m=10
+ m1 pf vim p 0 nch214 w=28um l=0.4um m=5
 
  *5th branch
- mbb4 pd vbias vdd vdd pch214 w=28um l=0.9um m=2
- mbb2 vbb2 vbb1 pd vdd pch214 w=28um l=0.9um m=2
- mb2 vbb2 vbb2 ph 0 nch214 w=28um l=0.65um m=5
- mb1 ph vbb2 p 0 nch214 w=28um l=0.65um
+ mbb4 pd vbias vdd vdd pch214 w=28um l=0.7um m=2
+ mbb2 vbb2 vbb1 pd vdd pch214 w=28um l=0.7um m=2
+ mb2 vbb2 vbb2 ph 0 nch214 w=28um l=0.4um m=5
+ mb1 ph vbb2 p 0 nch214 w=7um l=0.4um
  m0 p pib 0 0 nch214 w=28um l=0.6um m=12
  *vbb2 vbb2 0 0.6
  *vp p 0 0.3
 
  *6th branch
- m4 pe vbias vdd vdd pch214 w=28um l=0.9um m=5
- m4a vom vbb1 pe vdd pch214 w=28um l=0.9um m=5
- m2a vom vbb2 pg 0 nch214 w=28um l=0.65um m=40
- m2 pg vip p 0 nch214 w=28um l=0.65um m=5
+ m4 pe vbias vdd vdd pch214 w=28um l=0.7um m=5
+ m4a vom vbb1 pe vdd pch214 w=28um l=0.7um m=5
+ m2a vom vbb2 pg 0 nch214 w=28um l=0.4um m=10
+ m2 pg vip p 0 nch214 w=28um l=0.4um m=5
 
  *2rd stage
- * m5 ps1 vbias vdd vdd pch214 w=140um l=0.9um
- * m5a vom vbb1 ps1 vdd pch214 w=140um l=0.9um
- * ms1 vom vom1 0 0 nch214 w=140um l=0.65um
+ * m5 ps1 vbias vdd vdd pch214 w=140um l=0.7um
+ * m5a vom vbb1 ps1 vdd pch214 w=140um l=0.7um
+ * ms1 vom vom1 0 0 nch214 w=140um l=0.4um
 
- * m6 ps3 vbias vdd vdd pch214 w=140um l=0.9um
- * m6a vop vbb1 ps3 vdd pch214 w=140um l=0.9um
- * ms2 vop vop1 0 0 nch214 w=140um l=0.65um
+ * m6 ps3 vbias vdd vdd pch214 w=140um l=0.7um
+ * m6a vop vbb1 ps3 vdd pch214 w=140um l=0.7um
+ * ms2 vop vop1 0 0 nch214 w=140um l=0.4um
 
  x1 vid voc vop vom diffsense
  v1 vocdes 0 1.5
@@ -213,6 +213,34 @@
  + wwl     =  0.000000e+00  nlev    =  2.000000e+00  kf      =  0.250000e-25
 
 
+
+ ***********************************************************************
+ ** runlvl is invoked, you can disable it by:
+      a) Add option runlvl=0 to your current simulation job.
+      b) Copy $installdir/hspice.ini to your HOME directory and
+         customize it by adding option runlvl=0, which disables
+         it for all of your simulation jobs.
+      c) Re-invoke $installdir/bin/config program and unselect the
+         option runlvl setting in box 'hspice.ini' which disables
+         it for whole group simulation jobs.
+
+ ** runlvl is invoked, some options are ignored or automatically set:
+      Options below are automatically set(user setting will overwrite them):
+      if runlvl=6,            .option bypass=0
+      if runlvl=[1|2|3|4|5],  .option bypass=2
+
+      Options below are ignored, they are replaced by automated algorithms:
+        lvltim    dvdt      ft    fast   trtol  absvar  relvar
+          relq  chgtol    dvtr    imin    itl3    rmax
+
+ ** runlvl is invoked, actual option value used by HSPICE are:
+       runlvl= 6       bypass= 0      mbypass=   2.00   bytol= 100.00u
+ ***********************************************************************
+
+
+ **warning** dc voltage reset to initial transient source value
+             in source        0:vsd                 new dc=  0.0000D+00
+
  
 
   Opening plot unit= 79
@@ -226,7 +254,7 @@
  you can increase the efficiency of the
  operating point calculation by setting dcon= 1
  in the .option statement
- ****** HSPICE  --  A-2007.09  32-BIT    (Aug 28 2007) 10:07:50 06/17/2018 winnt
+ ****** HSPICE  --  A-2007.09  32-BIT    (Aug 28 2007) 10:54:10 06/17/2018 winnt
  ******  
  * ee214 design project                                                         
   ******  operating point information      tnom=  25.000 temp=  25.000          
@@ -234,27 +262,27 @@
  ***** operating point status is all       simulation time is     0.     
     node    =voltage      node    =voltage      node    =voltage
 
- +0:vdd     =   3.0000  0:voc     =   1.5018  0:vod     = 132.7827f
- +0:vom     =   1.5018  0:vomm    =   1.5018  0:vop     =   1.5018 
- +0:vopp    =   1.5018  0:vsc     =   1.5000  0:vsd     =   0.     
- +0:vsm     =   1.5000  0:vsp     =   1.5000  0:xm      =   1.5000 
- +0:xp      =   1.5000  0:ym      =   1.5000  0:yp      =   1.5000 
- +1:p       = 543.5121m 1:pb      =   2.4638  1:pc      =   2.4607 
- +1:pd      =   2.4626  1:pe      =   2.4607  1:pf      = 795.3854m
- +1:pg      = 795.3854m 1:ph      = 735.9945m 1:pib     = 790.4653m
- +1:vbb1    =   1.0603  1:vbb2    =   1.6430  1:vbias   =   1.7119 
- +1:vid     = 132.7827f 1:voc     =   1.5018  1:vocdes  =   1.5000 
- +3:vminv   =  -1.5018  4:middlem =   1.5000  4:middlep =   1.5000 
- +5:vminv   =  -1.5018 
+ +0:vdd     =   3.0000  0:voc     =   1.5040  0:vod     =   1.2044p
+ +0:vom     =   1.5040  0:vomm    =   1.5040  0:vop     =   1.5040 
+ +0:vopp    =   1.5040  0:vsc     =   1.1000  0:vsd     =   0.     
+ +0:vsm     =   1.1000  0:vsp     =   1.1000  0:xm      =   1.1000 
+ +0:xp      =   1.1000  0:ym      =   1.1000  0:yp      =   1.1000 
+ +1:p       = 265.5484m 1:pb      =   2.5403  1:pc      =   2.5358 
+ +1:pd      =   2.5357  1:pe      =   2.5358  1:pf      = 648.8839m
+ +1:pg      = 648.8839m 1:ph      = 660.9098m 1:pib     = 790.4653m
+ +1:vbb1    =   1.2550  1:vbb2    =   1.5017  1:vbias   =   1.8042 
+ +1:vid     =   1.2044p 1:voc     =   1.5040  1:vocdes  =   1.5000 
+ +3:vminv   =  -1.5040  4:middlem =   1.1000  4:middlep =   1.1000 
+ +5:vminv   =  -1.5040 
 
 
  ****  voltage sources
 
  subckt                                                          x1        
  element  0:vdd      0:vsc      0:vmp      0:vmm      0:vsd      1:v1      
-  volts      3.0000     1.5000     0.         0.         0.         1.5000 
-  current   -4.6895m    0.         0.         0.         0.         0.     
-  power     14.0684m    0.         0.         0.         0.         0.     
+  volts      3.0000     1.1000     0.         0.         0.         1.5000 
+  current   -4.7027m    0.         0.         0.         0.         0.     
+  power     14.1080m    0.         0.         0.         0.         0.     
 
  subckt   xt         xt         xt         xt        
  element  4:vxp      4:vyp      4:vxm      4:vym     
@@ -262,7 +290,7 @@
   current    0.         0.         0.         0.     
   power      0.         0.         0.         0.     
 
-     total voltage source power dissipation=   14.0684m       watts
+     total voltage source power dissipation=   14.1080m       watts
 
 
 
@@ -282,9 +310,9 @@
  subckt                         xs         xs         x1.x1      x1.x1     
  element  0:rs1      0:rs2      3:rdum1    3:rdum2    5:rdum1    5:rdum2   
   r value   10.0000g   10.0000g    1.0000g    1.0000g    1.0000g    1.0000g
-  v drop     0.         0.       132.7827f    1.5018   132.7827f    1.5018 
-  current    0.         0.       1.328e-22    1.5018n  1.328e-22    1.5018n
-  power      0.         0.         0.         2.2553n    0.         2.2553n
+  v drop     0.         0.         1.2044p    1.5040     1.2044p    1.5040 
+  current    0.         0.       1.204e-21    1.5040n  1.204e-21    1.5040n
+  power      0.         0.         0.         2.2620n    0.         2.2620n
 
 
  **** voltage-controlled current sources
@@ -292,8 +320,8 @@
 
  subckt     x1      
  element  1:g1      
-  v drop  -543.5121m
-  current  -88.3235u
+  v drop  -265.5484m
+  current -200.5114u
 
 
 
@@ -303,15 +331,15 @@
 
  subckt     xd         xd         xs         xs         xs         x1.x1   
  element  2:e1       2:e2       3:e1       3:e2       3:e3       5:e1      
-  volts      0.         0.        -1.5018     1.5018   132.7827f   -1.5018 
-  current    0.         0.         0.        -1.5018n -1.328e-22    0.     
+  volts      0.         0.        -1.5040     1.5040     1.2044p   -1.5040 
+  current    0.         0.         0.        -1.5040n -1.204e-21    0.     
 
 
 
  subckt     x1.x1      x1.x1   
  element  5:e2       5:e3      
-  volts      1.5018   132.7827f
-  current   -1.5018n -1.328e-22
+  volts      1.5040     1.2044p
+  current   -1.5040n -1.204e-21
 
 
 
@@ -324,26 +352,26 @@
  element  1:m01      1:mbb1     1:m02      1:mc2      1:mc1      1:m03     
  model    0:nch214   0:pch214   0:nch214   0:pch214   0:pch214   0:nch214  
  region     Saturati   Saturati   Saturati   Saturati   Saturati   Saturati
-  id       200.0000u   -1.0087m    1.0087m   -1.0232m   -1.0232m    1.0232m
+  id       200.0000u   -1.0136m    1.0136m   -1.0250m   -1.0250m    1.0250m
   ibs        0.         0.         0.         0.         0.         0.     
   ibd        0.         0.         0.         0.         0.         0.     
-  vgs      790.4653m   -1.9397   790.4653m   -1.2881    -1.4036   790.4653m
-  vds      790.4653m   -1.9397     1.0603  -536.1533m -751.9340m    1.7119 
-  vbs        0.         0.         0.         0.       536.1533m    0.     
-  vth      581.6826m -796.8257m  581.2411m -798.3862m -925.8798m  580.1747m
-  vdsat    171.0636m -950.9307m  171.3392m -458.2202m -460.9529m  172.0048m
-  vod      208.7826m   -1.1429   209.2242m -489.7010m -477.6915m  210.2905m
-  beta      10.3064m    1.7633m   51.5316m    9.0726m    8.9451m   51.5301m
-  gam eff  894.1238m  472.5709m  894.1238m  472.5709m  463.7372m  894.1238m
-  gm         1.7681m    1.5316m    8.9100m    3.6356m    3.8321m    9.0039m
-  gds        7.8026u   24.3124u   27.4147u  259.0010u   98.6812u   19.2163u
-  gmb      560.6860u  385.9114u    2.8240m  933.9240u  813.7957u    2.8504m
-  cdtot     43.2461f   47.7954f  203.4552f  304.5674f  261.6528f  182.2334f
-  cgtot     79.7755f  115.4924f  398.8855f  577.4605f  573.6746f  398.9048f
-  cstot    131.4536f  169.7964f  657.2464f  848.9801f  769.6575f  657.1934f
-  cbtot    117.2897f  119.4500f  573.6761f  669.3048f  539.4152f  552.4615f
-  cgs       62.9208f   96.1513f  314.5771f  474.2906f  478.1534f  314.5118f
-  cgd        6.8140f   13.5529f   34.0697f   67.7646f   67.7688f   34.0697f
+  vgs      790.4653m   -1.7450   790.4653m   -1.1958    -1.2853   790.4653m
+  vds      790.4653m   -1.7450     1.2550  -459.6671m -736.0937m    1.8042 
+  vbs        0.         0.         0.         0.       459.6671m    0.     
+  vth      581.6826m -774.4957m  580.9225m -778.7966m -883.2398m  580.0237m
+  vdsat    171.0636m -804.2888m  171.5382m -395.8447m -392.8996m  172.0991m
+  vod      208.7826m -970.5004m  209.5428m -416.9642m -402.0892m  210.4416m
+  beta      10.3064m    2.4291m   51.5312m   12.3601m   12.2448m   51.5299m
+  gam eff  894.1238m  472.5709m  894.1238m  472.5709m  464.8742m  894.1238m
+  gm         1.7681m    1.7972m    8.9445m    4.1818m    4.5144m    9.0139m
+  gds        7.8026u   38.4567u   23.5084u  374.5451u  121.8640u   18.7492u
+  gmb      560.6860u  423.2579u    2.8339m    1.0155m  932.0674u    2.8532m
+  cdtot     43.2461f   48.9771f  195.9881f  310.7750f  265.6748f  179.9257f
+  cgtot     79.7755f   92.8468f  398.8913f  464.2280f  461.9515f  398.9076f
+  cstot    131.4536f  143.3203f  657.2306f  716.5924f  652.1168f  657.1858f
+  cbtot    117.2897f  113.9708f  566.2112f  639.4413f  522.9515f  550.1548f
+  cgs       62.9208f   73.9624f  314.5577f  366.1059f  370.7393f  314.5025f
+  cgd        6.8140f   13.4317f   34.0697f   67.1583f   67.1659f   34.0697f
 
 
 
@@ -351,26 +379,26 @@
  element  1:m3       1:m3a      1:m1a      1:m1       1:mbb4     1:mbb2    
  model    0:pch214   0:pch214   0:nch214   0:nch214   0:pch214   0:pch214  
  region     Saturati   Saturati   Saturati   Saturati   Saturati   Saturati
-  id        -1.0240m   -1.0240m    1.0240m    1.0240m -409.4208u -409.4208u
+  id        -1.0267m   -1.0267m    1.0267m    1.0267m -410.6748u -410.6748u
   ibs        0.         0.         0.         0.         0.         0.     
   ibd        0.         0.         0.         0.         0.         0.     
-  vgs       -1.2881    -1.4004   847.6561m  956.4879m   -1.2881    -1.4023 
-  vds     -539.3097m -958.9238m  706.3811m  251.8733m -537.3820m -819.5766m
-  vbs        0.       539.3097m -795.3854m -543.5121m    0.       537.3820m
-  vth     -798.3827m -926.3252m  800.6644m  738.3424m -798.3849m -926.0676m
-  vdsat   -458.2230m -458.0372m   83.9891m  190.8624m -458.2213m -459.8063m
-  vod     -489.7045m -474.0897m   46.9916m  218.1455m -489.7023m -476.2749m
-  beta       9.0726m    8.9457m  381.7116m   47.5737m    3.6291m    3.5781m
-  gam eff  472.5709m  463.6909m  936.7973m  924.6748m  472.5709m  463.7192m
-  gm         3.6425m    3.8979m   19.2140m    8.0163m    1.4553m    1.5437m
-  gds      253.6373u   58.2651u   46.4378u  577.2211u  102.7557u   32.4353u
-  gmb      935.5937u  826.3657u    4.4131m    1.9979m  373.8318u  327.6062u
-  cdtot    304.3215f  253.3599f    1.5042p  215.9654f  121.7886f  103.5243f
-  cgtot    577.4605f  573.6582f    2.9959p  423.5415f  230.9842f  229.4673f
-  cstot    848.9801f  769.3258f    4.0876p  602.2488f  339.5921f  307.8113f
-  cbtot    669.0589f  530.7748f    3.6150p  505.0808f  267.6836f  214.5751f
-  cgs      474.2907f  478.1531f    2.2407p  339.8562f  189.7163f  191.2613f
-  cgd       67.7646f   67.7688f  273.6584f   34.1758f   27.1058f   27.1075f
+  vgs       -1.1958    -1.2807   852.8085m  834.4516m   -1.1958    -1.2807 
+  vds     -464.2499m   -1.0317   855.1263m  383.3355m -464.2769m   -1.0340 
+  vbs        0.       464.2499m -648.8839m -265.5484m    0.       464.2769m
+  vth     -778.7812m -883.2100m  758.7337m  678.2415m -778.7811m -883.2080m
+  vdsat   -395.8569m -389.2707m  109.3444m  142.0490m -395.8569m -389.2508m
+  vod     -416.9795m -397.5362m   94.0748m  156.2101m -416.9796m -397.5112m
+  beta      12.3601m   12.2457m  166.1347m   82.6703m    4.9440m    4.8983m
+  gam eff  472.5709m  464.8051m  929.8675m  909.9672m  472.5709m  464.8047m
+  gm         4.1969m    4.6146m   15.1748m   11.0420m    1.6788m    1.8460m
+  gds      363.1993u   70.0085u  203.3642u  288.6595u  145.2538u   27.9135u
+  gmb        1.0191m  950.7655u    2.9300m    2.5443m  407.6293u  380.3430u
+  cdtot    310.3888f  253.4428f  375.9074f  224.5117f  124.1546f  101.3429f
+  cgtot    464.2280f  461.9333f  533.4944f  274.9583f  185.6912f  184.7733f
+  cstot    716.5924f  651.6394f  835.3831f  466.0959f  286.6369f  260.6547f
+  cbtot    639.0551f  510.2082f  830.1837f  493.5859f  255.6211f  204.0478f
+  cgs      366.1060f  370.7562f  390.1887f  202.2131f  146.4424f  148.3025f
+  cgd       67.1583f   67.1660f   64.3916f   32.3462f   26.8633f   26.8664f
 
 
 
@@ -378,26 +406,26 @@
  element  1:mb2      1:mb1      1:m0       1:m4       1:m4a      1:m2a     
  model    0:nch214   0:nch214   0:nch214   0:pch214   0:pch214   0:nch214  
  region     Saturati     Linear   Saturati   Saturati   Saturati   Saturati
-  id       409.4208u  409.4208u    2.3692m   -1.0240m   -1.0240m    1.0240m
+  id       410.6748u  410.6748u    2.2635m   -1.0267m   -1.0267m    1.0267m
   ibs        0.         0.         0.         0.         0.         0.     
   ibd        0.         0.         0.         0.         0.         0.     
-  vgs      907.0470m    1.0995   790.4653m   -1.2881    -1.4004   847.6561m
-  vds      907.0470m  192.4824m  543.5121m -539.3097m -958.9238m  706.3811m
-  vbs     -735.9945m -543.5121m    0.         0.       539.3097m -795.3854m
-  vth      786.1562m  738.4150m  582.0868m -798.3827m -926.3252m  800.6644m
-  vdsat    128.5182m  280.9221m  170.8113m -458.2230m -458.0372m   83.9891m
-  vod      120.8908m  361.1143m  208.3785m -489.7045m -474.0897m   46.9916m
-  beta      47.6762m    9.4924m  123.6787m    9.0726m    8.9457m  381.7116m
-  gam eff  934.0261m  924.6748m  894.1238m  472.5709m  463.6909m  936.7973m
-  gm         5.3323m    1.5198m   20.9224m    3.6425m    3.8979m   19.2140m
-  gds       12.7888u    1.2020m  172.4643u  253.6373u   58.2651u   46.4378u
-  gmb        1.2409m  382.3775u    6.6386m  935.5937u  826.3657u    4.4131m
-  cdtot    184.0432f   66.7580f  555.9462f  304.3215f  253.3599f    1.5042p
-  cgtot    416.4643f   89.7600f  957.2874f  577.4605f  573.6582f    2.9959p
-  cstot    575.7261f  122.9335f    1.5775p  848.9801f  769.3258f    4.0876p
-  cbtot    454.1954f  102.2757f    1.4445p  669.0589f  530.7748f    3.6150p
-  cgs      331.8402f   65.5104f  755.1084f  474.2907f  478.1531f    2.2407p
-  cgd       34.1627f   15.7384f   81.7675f   67.7646f   67.7688f  273.6584f
+  vgs      840.7827m    1.2361   790.4653m   -1.1958    -1.2807   852.8085m
+  vds      840.7827m  395.3614m  265.5484m -464.2499m   -1.0317   855.1263m
+  vbs     -660.9098m -265.5484m    0.         0.       464.2499m -648.8839m
+  vth      761.3427m  677.1201m  582.5416m -778.7812m -883.2100m  758.7337m
+  vdsat    100.8723m  343.1282m  170.5272m -395.8569m -389.2707m  109.3444m
+  vod       79.4399m  559.0239m  207.9236m -416.9795m -397.5362m   94.0748m
+  beta      83.0759m    4.0109m  123.6802m   12.3601m   12.2457m  166.1347m
+  gam eff  930.4486m  909.9672m  894.1238m  472.5709m  464.8051m  929.8675m
+  gm         6.5413m    1.0608m   19.5421m    4.1969m    4.6146m   15.1748m
+  gds       87.1738u  308.8810u  910.2141u  363.1993u   70.0085u  203.3642u
+  gmb        1.2594m  238.7480u    6.2134m    1.0191m  950.7655u    2.9300m
+  cdtot    188.0220f   11.6751f  615.4100f  310.3888f  253.4428f  375.9074f
+  cgtot    262.6276f   13.4783f  957.2667f  464.2280f  461.9333f  533.4944f
+  cstot    411.0923f   23.7411f    1.5775p  716.5924f  651.6394f  835.3831f
+  cbtot    414.0827f   25.5842f    1.5039p  639.0551f  510.2082f  830.1837f
+  cgs      190.1827f   10.0800f  755.1742f  366.1060f  370.7562f  390.1887f
+  cgd       32.2336f    1.5742f   81.7675f   67.1583f   67.1660f   64.3916f
 
 
 
@@ -405,32 +433,32 @@
  element  1:m2      
  model    0:nch214  
  region     Saturati
-  id         1.0240m
+  id         1.0267m
   ibs        0.     
   ibd        0.     
-  vgs      956.4879m
-  vds      251.8733m
-  vbs     -543.5121m
-  vth      738.3424m
-  vdsat    190.8624m
-  vod      218.1455m
-  beta      47.5737m
-  gam eff  924.6748m
-  gm         8.0163m
-  gds      577.2211u
-  gmb        1.9979m
-  cdtot    215.9654f
-  cgtot    423.5415f
-  cstot    602.2488f
-  cbtot    505.0808f
-  cgs      339.8562f
-  cgd       34.1758f
+  vgs      834.4516m
+  vds      383.3355m
+  vbs     -265.5484m
+  vth      678.2415m
+  vdsat    142.0490m
+  vod      156.2101m
+  beta      82.6703m
+  gam eff  909.9672m
+  gm        11.0420m
+  gds      288.6595u
+  gmb        2.5443m
+  cdtot    224.5117f
+  cgtot    274.9583f
+  cstot    466.0959f
+  cbtot    493.5859f
+  cgs      202.2131f
+  cgd       32.3462f
 
 
 
 
           ***** job concluded
- ****** HSPICE  --  A-2007.09  32-BIT    (Aug 28 2007) 10:07:50 06/17/2018 winnt
+ ****** HSPICE  --  A-2007.09  32-BIT    (Aug 28 2007) 10:54:10 06/17/2018 winnt
  ******  
  * ee214 design project                                                         
   ******  job statistics summary           tnom=  25.000 temp=  25.000          
@@ -444,490 +472,15 @@
 
     analysis           time    # points   tot. iter  conv.iter
 
-    op point           0.02           1         248
-    ac analysis        0.07          71          71
-    readin             0.02
+    op point           0.03           1         132
+    transient          0.06        2001         138          54 rev=         4
+    readin             0.01
     errchk             0.01
     setup              0.01
     output             0.00
            total cpu time          0.23 seconds
-               job started at  10:07:50 06/17/2018
-               job ended   at  10:07:50 06/17/2018
-
-
- ****** HSPICE  --  A-2007.09  32-BIT    (Aug 28 2007) 10:07:50 06/17/2018 winnt
- ******  
-                                                                                
-  ******    alter processing listing       tnom=  25.000 temp=  25.000          
- ******  
- $ end of alter processing $
-  Opening plot unit= 79
- file=d:\seafile\大三下学期\模拟集成电路\project_telescopic\ota_test.pa1       
-
-
- **diagnostic** dc convergence failure, 
- resetting dcon option to 1 and retrying
-
- **diagnostic** dc convergence successful
- you can increase the efficiency of the
- operating point calculation by setting dcon= 1
- in the .option statement
-
- **diagnostic** dc convergence failure, 
- resetting dcon option to 1 and retrying
-
- **diagnostic** dc convergence successful
- you can increase the efficiency of the
- operating point calculation by setting dcon= 1
- in the .option statement
- ****** HSPICE  --  A-2007.09  32-BIT    (Aug 28 2007) 10:07:50 06/17/2018 winnt
- ******  
- * ee214 design project                                                         
-  ******  operating point information      tnom=  25.000 temp=  25.000          
- ******  
- ***** operating point status is all       simulation time is     0.     
-    node    =voltage      node    =voltage      node    =voltage
-
- +0:vdd     =   3.0000  0:voc     =   1.5018  0:vod     = 132.7827f
- +0:vom     =   1.5018  0:vomm    =   1.5018  0:vop     =   1.5018 
- +0:vopp    =   1.5018  0:vsc     =   1.5000  0:vsd     =   0.     
- +0:vsm     =   1.5000  0:vsp     =   1.5000  0:xm      =   1.5000 
- +0:xp      =   1.5000  0:ym      =   1.5000  0:yp      =   1.5000 
- +1:p       = 543.5121m 1:pb      =   2.4638  1:pc      =   2.4607 
- +1:pd      =   2.4626  1:pe      =   2.4607  1:pf      = 795.3854m
- +1:pg      = 795.3854m 1:ph      = 735.9945m 1:pib     = 790.4653m
- +1:vbb1    =   1.0603  1:vbb2    =   1.6430  1:vbias   =   1.7119 
- +1:vid     = 132.7827f 1:voc     =   1.5018  1:vocdes  =   1.5000 
- +3:vminv   =  -1.5018  4:middlem =   1.5000  4:middlep =   1.5000 
- +5:vminv   =  -1.5018 
-
-
- ****  voltage sources
-
- subckt                                                          x1        
- element  0:vdd      0:vsc      0:vmp      0:vmm      0:vsd      1:v1      
-  volts      3.0000     1.5000     0.         0.         0.         1.5000 
-  current   -4.6895m    0.         0.         0.         0.         0.     
-  power     14.0684m    0.         0.         0.         0.         0.     
-
- subckt   xt         xt         xt         xt        
- element  4:vxp      4:vyp      4:vxm      4:vym     
-  volts      0.         0.         0.         0.     
-  current    0.         0.         0.         0.     
-  power      0.         0.         0.         0.     
-
-     total voltage source power dissipation=   14.0684m       watts
-
-
-
- ***** current sources
-
- subckt   x1         xt        
- element  1:ib       4:it      
-  volts      2.2095     0.     
-  current  200.0000u    0.     
-  power   -441.9069u    0.     
-
-
-     total current source power dissipation=-441.9069u       watts
-
- **** resistors
-
- subckt                         xs         xs         x1.x1      x1.x1     
- element  0:rs1      0:rs2      3:rdum1    3:rdum2    5:rdum1    5:rdum2   
-  r value   10.0000g   10.0000g    1.0000g    1.0000g    1.0000g    1.0000g
-  v drop     0.         0.       132.7827f    1.5018   132.7827f    1.5018 
-  current    0.         0.       1.328e-22    1.5018n  1.328e-22    1.5018n
-  power      0.         0.         0.         2.2553n    0.         2.2553n
-
-
- **** voltage-controlled current sources
-
-
- subckt     x1      
- element  1:g1      
-  v drop  -543.5121m
-  current  -88.3235u
-
-
-
-
- **** voltage-controlled voltage sources
-
-
- subckt     xd         xd         xs         xs         xs         x1.x1   
- element  2:e1       2:e2       3:e1       3:e2       3:e3       5:e1      
-  volts      0.         0.        -1.5018     1.5018   132.7827f   -1.5018 
-  current    0.         0.         0.        -1.5018n -1.328e-22    0.     
-
-
-
- subckt     x1.x1      x1.x1   
- element  5:e2       5:e3      
-  volts      1.5018   132.7827f
-  current   -1.5018n -1.328e-22
-
-
-
-
-
- **** mosfets
-
-
- subckt   x1         x1         x1         x1         x1         x1        
- element  1:m01      1:mbb1     1:m02      1:mc2      1:mc1      1:m03     
- model    0:nch214   0:pch214   0:nch214   0:pch214   0:pch214   0:nch214  
- region     Saturati   Saturati   Saturati   Saturati   Saturati   Saturati
-  id       200.0000u   -1.0087m    1.0087m   -1.0232m   -1.0232m    1.0232m
-  ibs        0.         0.         0.         0.         0.         0.     
-  ibd        0.         0.         0.         0.         0.         0.     
-  vgs      790.4653m   -1.9397   790.4653m   -1.2881    -1.4036   790.4653m
-  vds      790.4653m   -1.9397     1.0603  -536.1533m -751.9340m    1.7119 
-  vbs        0.         0.         0.         0.       536.1533m    0.     
-  vth      581.6826m -796.8257m  581.2411m -798.3862m -925.8798m  580.1747m
-  vdsat    171.0636m -950.9307m  171.3392m -458.2202m -460.9529m  172.0048m
-  vod      208.7826m   -1.1429   209.2242m -489.7010m -477.6915m  210.2905m
-  beta      10.3064m    1.7633m   51.5316m    9.0726m    8.9451m   51.5301m
-  gam eff  894.1238m  472.5709m  894.1238m  472.5709m  463.7372m  894.1238m
-  gm         1.7681m    1.5316m    8.9100m    3.6356m    3.8321m    9.0039m
-  gds        7.8026u   24.3124u   27.4147u  259.0010u   98.6812u   19.2163u
-  gmb      560.6860u  385.9114u    2.8240m  933.9240u  813.7957u    2.8504m
-  cdtot     43.2461f   47.7954f  203.4552f  304.5674f  261.6528f  182.2334f
-  cgtot     79.7755f  115.4924f  398.8855f  577.4605f  573.6746f  398.9048f
-  cstot    131.4536f  169.7964f  657.2464f  848.9801f  769.6575f  657.1934f
-  cbtot    117.2897f  119.4500f  573.6761f  669.3048f  539.4152f  552.4615f
-  cgs       62.9208f   96.1513f  314.5771f  474.2906f  478.1534f  314.5118f
-  cgd        6.8140f   13.5529f   34.0697f   67.7646f   67.7688f   34.0697f
-
-
-
- subckt   x1         x1         x1         x1         x1         x1        
- element  1:m3       1:m3a      1:m1a      1:m1       1:mbb4     1:mbb2    
- model    0:pch214   0:pch214   0:nch214   0:nch214   0:pch214   0:pch214  
- region     Saturati   Saturati   Saturati   Saturati   Saturati   Saturati
-  id        -1.0240m   -1.0240m    1.0240m    1.0240m -409.4208u -409.4208u
-  ibs        0.         0.         0.         0.         0.         0.     
-  ibd        0.         0.         0.         0.         0.         0.     
-  vgs       -1.2881    -1.4004   847.6561m  956.4879m   -1.2881    -1.4023 
-  vds     -539.3097m -958.9238m  706.3811m  251.8733m -537.3820m -819.5766m
-  vbs        0.       539.3097m -795.3854m -543.5121m    0.       537.3820m
-  vth     -798.3827m -926.3252m  800.6644m  738.3424m -798.3849m -926.0676m
-  vdsat   -458.2230m -458.0372m   83.9891m  190.8624m -458.2213m -459.8063m
-  vod     -489.7045m -474.0897m   46.9916m  218.1455m -489.7023m -476.2749m
-  beta       9.0726m    8.9457m  381.7116m   47.5737m    3.6291m    3.5781m
-  gam eff  472.5709m  463.6909m  936.7973m  924.6748m  472.5709m  463.7192m
-  gm         3.6425m    3.8979m   19.2140m    8.0163m    1.4553m    1.5437m
-  gds      253.6373u   58.2651u   46.4378u  577.2211u  102.7557u   32.4353u
-  gmb      935.5937u  826.3657u    4.4131m    1.9979m  373.8318u  327.6062u
-  cdtot    304.3215f  253.3599f    1.5042p  215.9654f  121.7886f  103.5243f
-  cgtot    577.4605f  573.6582f    2.9959p  423.5415f  230.9842f  229.4673f
-  cstot    848.9801f  769.3258f    4.0876p  602.2488f  339.5921f  307.8113f
-  cbtot    669.0589f  530.7748f    3.6150p  505.0808f  267.6836f  214.5751f
-  cgs      474.2907f  478.1531f    2.2407p  339.8562f  189.7163f  191.2613f
-  cgd       67.7646f   67.7688f  273.6584f   34.1758f   27.1058f   27.1075f
-
-
-
- subckt   x1         x1         x1         x1         x1         x1        
- element  1:mb2      1:mb1      1:m0       1:m4       1:m4a      1:m2a     
- model    0:nch214   0:nch214   0:nch214   0:pch214   0:pch214   0:nch214  
- region     Saturati     Linear   Saturati   Saturati   Saturati   Saturati
-  id       409.4208u  409.4208u    2.3692m   -1.0240m   -1.0240m    1.0240m
-  ibs        0.         0.         0.         0.         0.         0.     
-  ibd        0.         0.         0.         0.         0.         0.     
-  vgs      907.0470m    1.0995   790.4653m   -1.2881    -1.4004   847.6561m
-  vds      907.0470m  192.4824m  543.5121m -539.3097m -958.9238m  706.3811m
-  vbs     -735.9945m -543.5121m    0.         0.       539.3097m -795.3854m
-  vth      786.1562m  738.4150m  582.0868m -798.3827m -926.3252m  800.6644m
-  vdsat    128.5182m  280.9221m  170.8113m -458.2230m -458.0372m   83.9891m
-  vod      120.8908m  361.1143m  208.3785m -489.7045m -474.0897m   46.9916m
-  beta      47.6762m    9.4924m  123.6787m    9.0726m    8.9457m  381.7116m
-  gam eff  934.0261m  924.6748m  894.1238m  472.5709m  463.6909m  936.7973m
-  gm         5.3323m    1.5198m   20.9224m    3.6425m    3.8979m   19.2140m
-  gds       12.7888u    1.2020m  172.4643u  253.6373u   58.2651u   46.4378u
-  gmb        1.2409m  382.3775u    6.6386m  935.5937u  826.3657u    4.4131m
-  cdtot    184.0432f   66.7580f  555.9462f  304.3215f  253.3599f    1.5042p
-  cgtot    416.4643f   89.7600f  957.2874f  577.4605f  573.6582f    2.9959p
-  cstot    575.7261f  122.9335f    1.5775p  848.9801f  769.3258f    4.0876p
-  cbtot    454.1954f  102.2757f    1.4445p  669.0589f  530.7748f    3.6150p
-  cgs      331.8402f   65.5104f  755.1084f  474.2907f  478.1531f    2.2407p
-  cgd       34.1627f   15.7384f   81.7675f   67.7646f   67.7688f  273.6584f
-
-
-
- subckt   x1        
- element  1:m2      
- model    0:nch214  
- region     Saturati
-  id         1.0240m
-  ibs        0.     
-  ibd        0.     
-  vgs      956.4879m
-  vds      251.8733m
-  vbs     -543.5121m
-  vth      738.3424m
-  vdsat    190.8624m
-  vod      218.1455m
-  beta      47.5737m
-  gam eff  924.6748m
-  gm         8.0163m
-  gds      577.2211u
-  gmb        1.9979m
-  cdtot    215.9654f
-  cgtot    423.5415f
-  cstot    602.2488f
-  cbtot    505.0808f
-  cgs      339.8562f
-  cgd       34.1758f
-
-
-
-
-
-
- **** the results of the sqrt of integral (v**2 / freq)
-      using more points from fstart to fstop 
-      results in more accurate total noise values.
-
- **** total output noise voltage   =   75.3991u       volts
- **** total equivalent input noise =  108.5377u      
- ****** HSPICE  --  A-2007.09  32-BIT    (Aug 28 2007) 10:07:50 06/17/2018 winnt
- ******  
- * ee214 design project                                                         
-  ******  operating point information      tnom=  25.000 temp=  25.000          
- ******  
- ***** operating point status is all       simulation time is     0.     
-    node    =voltage      node    =voltage      node    =voltage
-
- +0:vdd     =   3.0000  0:voc     =   1.5018  0:vod     =   1.0152p
- +0:vom     =   1.5018  0:vomm    =   1.5018  0:vop     =   1.5018 
- +0:vopp    =   1.5018  0:vsc     =   1.5000  0:vsd     =   0.     
- +0:vsm     =   1.5000  0:vsp     =   1.5000  0:xm      =   1.5000 
- +0:xp      =   1.5000  0:ym      =   1.5000  0:yp      =   1.5000 
- +1:p       = 543.5121m 1:pb      =   2.4638  1:pc      =   2.4607 
- +1:pd      =   2.4626  1:pe      =   2.4607  1:pf      = 795.3854m
- +1:pg      = 795.3854m 1:ph      = 735.9945m 1:pib     = 790.4653m
- +1:vbb1    =   1.0603  1:vbb2    =   1.6430  1:vbias   =   1.7119 
- +1:vid     =   1.0152p 1:voc     =   1.5018  1:vocdes  =   1.5000 
- +3:vminv   =  -1.5018  4:middlem =   1.5000  4:middlep =   1.5000 
- +5:vminv   =  -1.5018 
-
-
- ****  voltage sources
-
- subckt                                                          x1        
- element  0:vdd      0:vsc      0:vmp      0:vmm      0:vsd      1:v1      
-  volts      3.0000     1.5000     0.         0.         0.         1.5000 
-  current   -4.6895m    0.         0.         0.         0.         0.     
-  power     14.0684m    0.         0.         0.         0.         0.     
-
- subckt   xt         xt         xt         xt        
- element  4:vxp      4:vyp      4:vxm      4:vym     
-  volts      0.         0.         0.         0.     
-  current    0.         0.         0.         0.     
-  power      0.         0.         0.         0.     
-
-     total voltage source power dissipation=   14.0684m       watts
-
-
-
- ***** current sources
-
- subckt   x1         xt        
- element  1:ib       4:it      
-  volts      2.2095     0.     
-  current  200.0000u    0.     
-  power   -441.9069u    0.     
-
-
-     total current source power dissipation=-441.9069u       watts
-
- **** resistors
-
- subckt                         xs         xs         x1.x1      x1.x1     
- element  0:rs1      0:rs2      3:rdum1    3:rdum2    5:rdum1    5:rdum2   
-  r value   10.0000g   10.0000g    1.0000g    1.0000g    1.0000g    1.0000g
-  v drop     0.         0.         1.0152p    1.5018     1.0152p    1.5018 
-  current    0.         0.       1.015e-21    1.5018n  1.015e-21    1.5018n
-  power      0.         0.         0.         2.2553n    0.         2.2553n
-
-
- **** voltage-controlled current sources
-
-
- subckt     x1      
- element  1:g1      
-  v drop  -543.5121m
-  current  -88.3235u
-
-
-
-
- **** voltage-controlled voltage sources
-
-
- subckt     xd         xd         xs         xs         xs         x1.x1   
- element  2:e1       2:e2       3:e1       3:e2       3:e3       5:e1      
-  volts      0.         0.        -1.5018     1.5018     1.0152p   -1.5018 
-  current    0.         0.         0.        -1.5018n -1.015e-21    0.     
-
-
-
- subckt     x1.x1      x1.x1   
- element  5:e2       5:e3      
-  volts      1.5018     1.0152p
-  current   -1.5018n -1.015e-21
-
-
-
-
-
- **** mosfets
-
-
- subckt   x1         x1         x1         x1         x1         x1        
- element  1:m01      1:mbb1     1:m02      1:mc2      1:mc1      1:m03     
- model    0:nch214   0:pch214   0:nch214   0:pch214   0:pch214   0:nch214  
- region     Saturati   Saturati   Saturati   Saturati   Saturati   Saturati
-  id       200.0000u   -1.0087m    1.0087m   -1.0232m   -1.0232m    1.0232m
-  ibs        0.         0.         0.         0.         0.         0.     
-  ibd        0.         0.         0.         0.         0.         0.     
-  vgs      790.4653m   -1.9397   790.4653m   -1.2881    -1.4036   790.4653m
-  vds      790.4653m   -1.9397     1.0603  -536.1533m -751.9340m    1.7119 
-  vbs        0.         0.         0.         0.       536.1533m    0.     
-  vth      581.6826m -796.8257m  581.2411m -798.3862m -925.8798m  580.1747m
-  vdsat    171.0636m -950.9307m  171.3392m -458.2202m -460.9529m  172.0048m
-  vod      208.7826m   -1.1429   209.2242m -489.7010m -477.6915m  210.2905m
-  beta      10.3064m    1.7633m   51.5316m    9.0726m    8.9451m   51.5301m
-  gam eff  894.1238m  472.5709m  894.1238m  472.5709m  463.7372m  894.1238m
-  gm         1.7681m    1.5316m    8.9100m    3.6356m    3.8321m    9.0039m
-  gds        7.8026u   24.3124u   27.4147u  259.0010u   98.6812u   19.2163u
-  gmb      560.6860u  385.9114u    2.8240m  933.9240u  813.7957u    2.8504m
-  cdtot     43.2461f   47.7954f  203.4552f  304.5674f  261.6528f  182.2334f
-  cgtot     79.7755f  115.4924f  398.8855f  577.4605f  573.6746f  398.9048f
-  cstot    131.4536f  169.7964f  657.2464f  848.9801f  769.6575f  657.1934f
-  cbtot    117.2897f  119.4500f  573.6761f  669.3048f  539.4152f  552.4615f
-  cgs       62.9208f   96.1513f  314.5771f  474.2906f  478.1534f  314.5118f
-  cgd        6.8140f   13.5529f   34.0697f   67.7646f   67.7688f   34.0697f
-
-
-
- subckt   x1         x1         x1         x1         x1         x1        
- element  1:m3       1:m3a      1:m1a      1:m1       1:mbb4     1:mbb2    
- model    0:pch214   0:pch214   0:nch214   0:nch214   0:pch214   0:pch214  
- region     Saturati   Saturati   Saturati   Saturati   Saturati   Saturati
-  id        -1.0240m   -1.0240m    1.0240m    1.0240m -409.4208u -409.4208u
-  ibs        0.         0.         0.         0.         0.         0.     
-  ibd        0.         0.         0.         0.         0.         0.     
-  vgs       -1.2881    -1.4004   847.6561m  956.4879m   -1.2881    -1.4023 
-  vds     -539.3097m -958.9238m  706.3811m  251.8733m -537.3820m -819.5766m
-  vbs        0.       539.3097m -795.3854m -543.5121m    0.       537.3820m
-  vth     -798.3827m -926.3252m  800.6644m  738.3424m -798.3849m -926.0676m
-  vdsat   -458.2230m -458.0372m   83.9891m  190.8624m -458.2213m -459.8063m
-  vod     -489.7045m -474.0897m   46.9916m  218.1455m -489.7023m -476.2749m
-  beta       9.0726m    8.9457m  381.7116m   47.5737m    3.6291m    3.5781m
-  gam eff  472.5709m  463.6909m  936.7973m  924.6748m  472.5709m  463.7192m
-  gm         3.6425m    3.8979m   19.2140m    8.0163m    1.4553m    1.5437m
-  gds      253.6373u   58.2651u   46.4378u  577.2211u  102.7557u   32.4353u
-  gmb      935.5937u  826.3657u    4.4131m    1.9979m  373.8318u  327.6062u
-  cdtot    304.3215f  253.3599f    1.5042p  215.9654f  121.7886f  103.5243f
-  cgtot    577.4605f  573.6582f    2.9959p  423.5415f  230.9842f  229.4673f
-  cstot    848.9801f  769.3258f    4.0876p  602.2488f  339.5921f  307.8113f
-  cbtot    669.0589f  530.7748f    3.6150p  505.0808f  267.6836f  214.5751f
-  cgs      474.2907f  478.1531f    2.2407p  339.8562f  189.7163f  191.2613f
-  cgd       67.7646f   67.7688f  273.6584f   34.1758f   27.1058f   27.1075f
-
-
-
- subckt   x1         x1         x1         x1         x1         x1        
- element  1:mb2      1:mb1      1:m0       1:m4       1:m4a      1:m2a     
- model    0:nch214   0:nch214   0:nch214   0:pch214   0:pch214   0:nch214  
- region     Saturati     Linear   Saturati   Saturati   Saturati   Saturati
-  id       409.4208u  409.4208u    2.3692m   -1.0240m   -1.0240m    1.0240m
-  ibs        0.         0.         0.         0.         0.         0.     
-  ibd        0.         0.         0.         0.         0.         0.     
-  vgs      907.0470m    1.0995   790.4653m   -1.2881    -1.4004   847.6561m
-  vds      907.0470m  192.4824m  543.5121m -539.3097m -958.9238m  706.3811m
-  vbs     -735.9945m -543.5121m    0.         0.       539.3097m -795.3854m
-  vth      786.1562m  738.4150m  582.0868m -798.3827m -926.3252m  800.6644m
-  vdsat    128.5182m  280.9221m  170.8113m -458.2230m -458.0372m   83.9891m
-  vod      120.8908m  361.1143m  208.3785m -489.7045m -474.0897m   46.9916m
-  beta      47.6762m    9.4924m  123.6787m    9.0726m    8.9457m  381.7116m
-  gam eff  934.0261m  924.6748m  894.1238m  472.5709m  463.6909m  936.7973m
-  gm         5.3323m    1.5198m   20.9224m    3.6425m    3.8979m   19.2140m
-  gds       12.7888u    1.2020m  172.4643u  253.6373u   58.2651u   46.4378u
-  gmb        1.2409m  382.3775u    6.6386m  935.5937u  826.3657u    4.4131m
-  cdtot    184.0432f   66.7580f  555.9462f  304.3215f  253.3599f    1.5042p
-  cgtot    416.4643f   89.7600f  957.2874f  577.4605f  573.6582f    2.9959p
-  cstot    575.7261f  122.9335f    1.5775p  848.9801f  769.3258f    4.0876p
-  cbtot    454.1954f  102.2757f    1.4445p  669.0589f  530.7748f    3.6150p
-  cgs      331.8402f   65.5104f  755.1084f  474.2907f  478.1531f    2.2407p
-  cgd       34.1627f   15.7384f   81.7675f   67.7646f   67.7688f  273.6584f
-
-
-
- subckt   x1        
- element  1:m2      
- model    0:nch214  
- region     Saturati
-  id         1.0240m
-  ibs        0.     
-  ibd        0.     
-  vgs      956.4879m
-  vds      251.8733m
-  vbs     -543.5121m
-  vth      738.3424m
-  vdsat    190.8624m
-  vod      218.1455m
-  beta      47.5737m
-  gam eff  924.6748m
-  gm         8.0163m
-  gds      577.2211u
-  gmb        1.9979m
-  cdtot    215.9654f
-  cgtot    423.5415f
-  cstot    602.2488f
-  cbtot    505.0808f
-  cgs      339.8562f
-  cgd       34.1758f
-
-
-
-
-
-
- **** the results of the sqrt of integral (v**2 / freq)
-      using more points from fstart to fstop 
-      results in more accurate total noise values.
-
- **** total output noise voltage   =   75.3637u       volts
- **** total equivalent input noise =  111.4923u      
-
-          ***** job concluded
- ****** HSPICE  --  A-2007.09  32-BIT    (Aug 28 2007) 10:07:50 06/17/2018 winnt
- ******  
- * ee214 design project                                                         
-  ******  job statistics summary           tnom=  25.000 temp=  25.000          
- ******  
-
-           total memory used        511 kbytes
-
-  # nodes =      35 # elements=      52
-  # diodes=       0 # bjts    =       0 # jfets   =       0 # mosfets =      19
-  # va device =       0
-
-    analysis           time    # points   tot. iter  conv.iter
-
-    op point           0.03           1         251
-    dc sweep           0.13        2001        4354
-    ac analysis        0.21          71         872
-    readin             0.04
-    errchk             0.02
-    setup              0.03
-    output             0.00
-           total cpu time          0.53 seconds
-               job started at  10:07:50 06/17/2018
-               job ended   at  10:07:51 06/17/2018
+               job started at  10:54:10 06/17/2018
+               job ended   at  10:54:10 06/17/2018
 
 
  Init: hspice initialization file: C:\synopsys\Hspice_A-2007.09\hspice.ini

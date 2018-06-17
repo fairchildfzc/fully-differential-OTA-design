@@ -1,4 +1,4 @@
-***** HSPICE  --  A-2007.09  32-BIT    (Aug 28 2007) 10:07:50 06/17/2018 winnt
+***** HSPICE  --  A-2007.09  32-BIT    (Aug 28 2007) 10:54:10 06/17/2018 winnt
  Input File: d:\seafile\大三下学期\模拟集成电路\project_telescopic\ota_test.sp
  lic:
  lic: FLEXlm: v8.5b
@@ -11,79 +11,31 @@
  lic: NODE LOCKED license on hostid "985fd3462180 0205857feb80 985fd346217f 9a5f
  lic:
  Init: hspice initialization file: C:\synopsys\Hspice_A-2007.09\hspice.ini
- init: begin read circuit files,  cpu clock=  9.00E-02
+ init: begin read circuit files,  cpu clock=  9.50E-02
        option post
        option brief
- init: end read circuit files,  cpu clock=  1.02E-01 memory=    280 kb
- init: begin check errors,  cpu clock=  1.02E-01
- init: end check errors,  cpu clock=  1.07E-01 memory=    283 kb
- init: begin setup matrix, pivot=    10 cpu clock=  1.07E-01
-       establish matrix -- done,  cpu clock=  1.10E-01 memory=    295 kb
-       re-order matrix -- done,  cpu clock=  1.11E-01 memory=    300 kb
- init: end setup matrix,  cpu clock=  1.17E-01 memory=    330 kb
- dcop: begin dcop,  cpu clock=  1.19E-01
- dcop: end dcop,  cpu clock=  1.36E-01 memory=    330 kb  tot_iter=     248
- output: d:\seafile\大三下学期\模拟集成电路\project_telescopic\ota_test.ac0
- sweep: ac ac0    begin, #sweeps=  71 cpu clock=  2.27E-01
- ac: frequency=    1.26E+03
- ac: frequency=    5.01E+03
- ac: frequency=    2.51E+04
- ac: frequency=    1.26E+05
- ac: frequency=    6.31E+05
- ac: frequency=    3.16E+06
- ac: frequency=    1.58E+07
- ac: frequency=    7.94E+07
- ac: frequency=    3.98E+08
- ac: frequency=    2.00E+09
- ac: frequency=    1.00E+10
- sweep: ac ac0    end,  cpu clock=  3.00E-01 memory=    331 kb
->info:         ***** hspice job concluded
->alter:
- init: begin read circuit files,  cpu clock=  3.41E-01
-       option post
-       option brief
- init: end read circuit files,  cpu clock=  3.77E-01 memory=    280 kb
- init: begin check errors,  cpu clock=  3.77E-01
- init: end check errors,  cpu clock=  3.98E-01 memory=    459 kb
- init: begin setup matrix, pivot=    10 cpu clock=  3.98E-01
-       establish matrix -- done,  cpu clock=  4.10E-01 memory=    471 kb
-       re-order matrix -- done,  cpu clock=  4.16E-01 memory=    476 kb
- init: end setup matrix,  cpu clock=  4.24E-01 memory=    511 kb
- output: d:\seafile\大三下学期\模拟集成电路\project_telescopic\ota_test.sw0
- sweep: dc dc0    begin, #sweeps=2001 cpu clock=  4.36E-01
- sweep: dc dc0    end,  cpu clock=  5.64E-01 memory=    511 kb
- dcop: begin dcop,  cpu clock=  5.74E-01
- dcop: end dcop,  cpu clock=  5.90E-01 memory=    511 kb  tot_iter=     248
- output: d:\seafile\大三下学期\模拟集成电路\project_telescopic\ota_test.ac1
- sweep: ac ac0    begin, #sweeps=  71 cpu clock=  6.05E-01
- ac: frequency=    1.26E+03
- ac: frequency=    5.01E+03
- ac: frequency=    2.51E+04
- ac: frequency=    1.26E+05
- ac: frequency=    6.31E+05
- ac: frequency=    3.16E+06
- ac: frequency=    1.58E+07
- ac: frequency=    7.94E+07
- ac: frequency=    3.98E+08
- ac: frequency=    2.00E+09
- ac: frequency=    1.00E+10
- sweep: ac ac0    end,  cpu clock=  6.85E-01 memory=    512 kb
- dcop: begin dcop,  cpu clock=  6.95E-01
- dcop: end dcop,  cpu clock=  7.02E-01 memory=    511 kb  tot_iter=     251
- output: d:\seafile\大三下学期\模拟集成电路\project_telescopic\ota_test.ac2
- sweep: ac ac0    begin, #sweeps= 801 cpu clock=  7.15E-01
- ac: frequency=    1.02E+03
- ac: frequency=    6.31E+03
- ac: frequency=    3.98E+04
- ac: frequency=    2.51E+05
- ac: frequency=    1.58E+06
- ac: frequency=    1.00E+07
- ac: frequency=    6.31E+07
- ac: frequency=    3.98E+08
- ac: frequency=    2.51E+09
- ac: frequency=    1.58E+10
- ac: frequency=    1.00E+11
- sweep: ac ac0    end,  cpu clock=  8.44E-01 memory=    519 kb
+ init: end read circuit files,  cpu clock=  1.03E-01 memory=    280 kb
+ init: begin check errors,  cpu clock=  1.03E-01
+ init: end check errors,  cpu clock=  1.09E-01 memory=    282 kb
+ init: begin setup matrix, pivot=    10 cpu clock=  1.09E-01
+       establish matrix -- done,  cpu clock=  1.13E-01 memory=    294 kb
+       re-order matrix -- done,  cpu clock=  1.15E-01 memory=    299 kb
+ init: end setup matrix,  cpu clock=  1.20E-01 memory=    330 kb
+ dcop: begin dcop,  cpu clock=  1.22E-01
+ dcop: end dcop,  cpu clock=  1.37E-01 memory=    330 kb  tot_iter=     132
+ output: d:\seafile\大三下学期\模拟集成电路\project_telescopic\ota_test.tr0
+ sweep: tran tran0    begin, stop_t=  2.00E-08 #sweeps=2001 cpu clock=  2.28E-01
+ tran: time= 2.15411E-09 tot_iter=      71   conv_iter=      25
+ tran: time= 4.09211E-09 tot_iter=      95   conv_iter=      33
+ tran: time= 6.46885E-09 tot_iter=     106   conv_iter=      38
+ tran: time= 8.69679E-09 tot_iter=     112   conv_iter=      41
+ tran: time= 1.06968E-08 tot_iter=     116   conv_iter=      43
+ tran: time= 1.26968E-08 tot_iter=     120   conv_iter=      45
+ tran: time= 1.46968E-08 tot_iter=     124   conv_iter=      47
+ tran: time= 1.66968E-08 tot_iter=     128   conv_iter=      49
+ tran: time= 1.86968E-08 tot_iter=     132   conv_iter=      51
+ tran: time= 2.00000E-08 tot_iter=     136   conv_iter=      53
+ sweep: tran tran0    end,  cpu clock=  2.97E-01 memory=    330 kb
 >info:         ***** hspice job concluded
  Init: hspice initialization file: C:\synopsys\Hspice_A-2007.09\hspice.ini
  lic: Release hspice token(s)
