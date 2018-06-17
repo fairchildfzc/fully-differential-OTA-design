@@ -1,0 +1,47 @@
+* "simulator" "HSPICE" 
+* "version" "A-2007.09"
+* "format" "HSP"
+* "rundate" "17:03:35 06/17/2018 "
+* "netlist" "d:\seafile\大三下学期\模拟集成电路\project_telescopic\ota_test.sp "
+* "runtitle" "* ee214 design project"
+* time =    0.            
+* temperature =   25.0000        
+*** BEGIN: Saved Operating Point ***                     
+.option 
++ gmindc=   1.0000p       
+.nodeset
++ vdd =   3.0000        
++ voc =   1.4021        
++ vod =   2.9137p       
++ vom =   1.4021        
++ vomm =   1.4021        
++ vop =   1.4021        
++ vopp =   1.4021        
++ vsc =   1.2000        
++ vsd =   0.            
++ vsm =   1.2000        
++ vsp =   1.2000        
++ xm =   1.2000        
++ xp =   1.2000        
++ ym =   1.2000        
++ yp =   1.2000        
++ x1.p = 311.9603m       
++ x1.pb =   2.5771        
++ x1.pc =   2.5734        
++ x1.pd =   2.5753        
++ x1.pe =   2.5734        
++ x1.pf = 791.3166m       
++ x1.pg = 791.3166m       
++ x1.ph = 767.8409m       
++ x1.pib = 815.5268m       
++ x1.vbb1 =   1.3073        
++ x1.vbb2 =   1.6590        
++ x1.vbias =   1.8178        
++ x1.vid =   2.9137p       
++ x1.voc =   1.4021        
++ x1.vocdes =   1.4000        
++ xs.vminv =  -1.4021        
++ xt.middlem =   1.2000        
++ xt.middlep =   1.2000        
++ x1.x1.vminv =  -1.4021        
+***   END: Saved Operating Point ***                     

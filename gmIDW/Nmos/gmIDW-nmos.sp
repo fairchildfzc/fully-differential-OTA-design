@@ -4,7 +4,7 @@ tran loop analysis
 
 .param vt=601.6155m
 
-Mn1 d g 0 0 nch214 L=0.45u W=10u
+Mn1 d g 0 0 nch214 L=0.65u W=38u M=5
 vg g 0 dc 'vt'
 vd d 0 dc 2
 

@@ -1,0 +1,89 @@
+***** HSPICE  --  A-2007.09  32-BIT    (Aug 28 2007) 17:03:35 06/17/2018 winnt
+ Input File: d:\seafile\大三下学期\模拟集成电路\project_telescopic\ota_test.sp
+ lic:
+ lic: FLEXlm: v8.5b
+ lic: USER:   Zichen Fan           HOSTNAME: DESKTOP-V3SQE64
+ lic: HOSTID: "985fd3462180 985fd346217f 9a5fd346207e 9a5fd346257e" PID:      15
+ lic: Using FLEXlm license file:
+ lic: C:\synopsys\Hspice_A-2007.09\hspice_2007-09.lic
+ lic: Checkout 1 hspice;  Encryption code: AD47C1C891DA5D596A45
+ lic: License/Maintenance for hspice will expire on 31-dec-2020/2007.9
+ lic: NODE LOCKED license on hostid "985fd3462180 985fd346217f 9a5fd346207e 9a5f
+ lic:
+ Init: hspice initialization file: C:\synopsys\Hspice_A-2007.09\hspice.ini
+ init: begin read circuit files,  cpu clock=  1.04E-01
+       option post
+       option brief
+ init: end read circuit files,  cpu clock=  1.16E-01 memory=    280 kb
+ init: begin check errors,  cpu clock=  1.16E-01
+ init: end check errors,  cpu clock=  1.22E-01 memory=    283 kb
+ init: begin setup matrix, pivot=    10 cpu clock=  1.22E-01
+       establish matrix -- done,  cpu clock=  2.13E-01 memory=    295 kb
+       re-order matrix -- done,  cpu clock=  2.15E-01 memory=    300 kb
+ init: end setup matrix,  cpu clock=  2.29E-01 memory=    330 kb
+ dcop: begin dcop,  cpu clock=  2.32E-01
+ dcop: end dcop,  cpu clock=  2.55E-01 memory=    330 kb  tot_iter=     190
+ output: d:\seafile\大三下学期\模拟集成电路\project_telescopic\ota_test.ac0
+ sweep: ac ac0    begin, #sweeps=  71 cpu clock=  2.75E-01
+ ac: frequency=    1.26E+03
+ ac: frequency=    5.01E+03
+ ac: frequency=    2.51E+04
+ ac: frequency=    1.26E+05
+ ac: frequency=    6.31E+05
+ ac: frequency=    3.16E+06
+ ac: frequency=    1.58E+07
+ ac: frequency=    7.94E+07
+ ac: frequency=    3.98E+08
+ ac: frequency=    2.00E+09
+ ac: frequency=    1.00E+10
+ sweep: ac ac0    end,  cpu clock=  3.63E-01 memory=    331 kb
+>info:         ***** hspice job concluded
+>alter:
+ init: begin read circuit files,  cpu clock=  4.43E-01
+       option post
+       option brief
+ init: end read circuit files,  cpu clock=  5.38E-01 memory=    280 kb
+ init: begin check errors,  cpu clock=  5.38E-01
+ init: end check errors,  cpu clock=  5.91E-01 memory=    459 kb
+ init: begin setup matrix, pivot=    10 cpu clock=  5.91E-01
+       establish matrix -- done,  cpu clock=  6.08E-01 memory=    471 kb
+       re-order matrix -- done,  cpu clock=  6.19E-01 memory=    476 kb
+ init: end setup matrix,  cpu clock=  6.38E-01 memory=    511 kb
+ output: d:\seafile\大三下学期\模拟集成电路\project_telescopic\ota_test.sw0
+ sweep: dc dc0    begin, #sweeps=2001 cpu clock=  6.57E-01
+ sweep: dc dc0    end,  cpu clock=  8.25E-01 memory=    511 kb
+ dcop: begin dcop,  cpu clock=  8.36E-01
+ dcop: end dcop,  cpu clock=  8.53E-01 memory=    511 kb  tot_iter=     190
+ output: d:\seafile\大三下学期\模拟集成电路\project_telescopic\ota_test.ac1
+ sweep: ac ac0    begin, #sweeps=  71 cpu clock=  8.69E-01
+ ac: frequency=    1.26E+03
+ ac: frequency=    5.01E+03
+ ac: frequency=    2.51E+04
+ ac: frequency=    1.26E+05
+ ac: frequency=    6.31E+05
+ ac: frequency=    3.16E+06
+ ac: frequency=    1.58E+07
+ ac: frequency=    7.94E+07
+ ac: frequency=    3.98E+08
+ ac: frequency=    2.00E+09
+ ac: frequency=    1.00E+10
+ sweep: ac ac0    end,  cpu clock=  9.90E-01 memory=    512 kb
+ dcop: begin dcop,  cpu clock=  1.01E+00
+ dcop: end dcop,  cpu clock=  1.02E+00 memory=    511 kb  tot_iter=     193
+ output: d:\seafile\大三下学期\模拟集成电路\project_telescopic\ota_test.ac2
+ sweep: ac ac0    begin, #sweeps= 801 cpu clock=  1.04E+00
+ ac: frequency=    1.02E+03
+ ac: frequency=    6.31E+03
+ ac: frequency=    3.98E+04
+ ac: frequency=    2.51E+05
+ ac: frequency=    1.58E+06
+ ac: frequency=    1.00E+07
+ ac: frequency=    6.31E+07
+ ac: frequency=    3.98E+08
+ ac: frequency=    2.51E+09
+ ac: frequency=    1.58E+10
+ ac: frequency=    1.00E+11
+ sweep: ac ac0    end,  cpu clock=  1.27E+00 memory=    519 kb
+>info:         ***** hspice job concluded
+ Init: hspice initialization file: C:\synopsys\Hspice_A-2007.09\hspice.ini
+ lic: Release hspice token(s)
