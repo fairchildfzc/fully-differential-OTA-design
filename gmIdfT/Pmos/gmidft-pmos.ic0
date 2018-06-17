@@ -1,0 +1,16 @@
+* "simulator" "HSPICE" 
+* "version" "A-2007.09"
+* "format" "HSP"
+* "rundate" "22:20:46 06/16/2018 "
+* "netlist" "c:\users\zichen fan\desktop\gmidft\pmos\gmidft-pmos.sp "
+* "runtitle" "tran loop analysis"
+* time =    0.            
+* temperature =   25.0000        
+*** BEGIN: Saved Operating Point ***                     
+.option 
++ gmindc=   1.0000p       
+.nodeset
++ d =   1.5000        
++ g =   2.1253        
++ vdd =   3.0000        
+***   END: Saved Operating Point ***                     

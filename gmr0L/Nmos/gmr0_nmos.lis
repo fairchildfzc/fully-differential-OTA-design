@@ -1,0 +1,142 @@
+ ****** HSPICE  --  A-2007.09  32-BIT    (Aug 28 2007) 21:20:44 06/16/2018 winnt
+  Copyright (C) 2007 Synopsys, Inc. All Rights Reserved.                        
+  Unpublished-rights reserved under US copyright laws.
+  This program is protected by law and is subject to the 
+  terms and conditions of the license agreement found in:
+    C:\synopsys\Hspice_A-2007.09\license.txt
+  Use of this program is your acceptance to be bound by this 
+  license agreement. HSPICE is the trademark of Synopsys, Inc.
+  Input File: c:\users\zichen fan\desktop\gmr0l\nmos\gmr0_nmos.sp               
+  lic:  
+  lic: FLEXlm: v8.5b 
+  lic: USER:   Zichen Fan           HOSTNAME: DESKTOP-V3SQE64 
+  lic: HOSTID: "985fd3462180 0205857feb80 985fd346217f 9a5fd346207e 9a5fd346257e
+ "
+  lic: Using FLEXlm license file: 
+  lic: C:\synopsys\Hspice_A-2007.09\hspice_2007-09.lic 
+  lic: Checkout 1 hspice;  Encryption code: AD47C1C891DA5D596A45 
+  lic: License/Maintenance for hspice will expire on 31-dec-2020/2007.9 
+  lic: NODE LOCKED license on hostid "985fd3462180 0205857feb80 985fd346217f 9a5
+ f
+  lic:   
+ Init: read install configuration file: C:\synopsys\Hspice_A-2007.09\meta.cfg
+ Init: hspice initialization file: C:\synopsys\Hspice_A-2007.09\hspice.ini
+
+
+
+
+ * zichen fan
+ * vt measured using .op run
+ .param vt1=596.8380m
+ .param vt2=589.0905m
+ .param vt3=580.4510m
+ .param vt4=571.8928m
+ .param vt5=563.8428m
+
+ mn1 d g1 0 0 nch214 l=0.4um w=10um
+ mn2 d g2 0 0 nch214 l=0.45um w=10um
+ mn3 d g3 0 0 nch214 l=0.5um w=10um
+ mn4 d g4 0 0 nch214 l=0.55um w=10um
+ mn5 d g5 0 0 nch214 l=0.6um w=10um
+ vg1 g1 0 dc 'vt1+0.2'
+ vg2 g2 0 dc 'vt2+0.2'
+ vg3 g3 0 dc 'vt3+0.2'
+ vg4 g4 0 dc 'vt4+0.2'
+ vg5 g5 0 dc 'vt5+0.2'
+ vd d 0 dc 1
+ .op
+ .dc vd 0 3.3 10mv
+ .probe av1 = par('gmo(mn1)/gdso(mn1)')
+ .probe av2 = par('gmo(mn2)/gdso(mn2)')
+ .probe av3 = par('gmo(mn3)/gdso(mn3)')
+ .probe av4 = par('gmo(mn4)/gdso(mn4)')
+ .probe av5 = par('gmo(mn5)/gdso(mn5)')
+
+ .option post brief runlvl=6
+  **warning** (ee214_hspice.txt:47)   model pch214 is not used in netlist
+ 
+
+ ****** HSPICE  --  A-2007.09  32-BIT    (Aug 28 2007) 21:20:44 06/16/2018 winnt
+ ******  
+ * gm*r0 vs. vds                                                                
+  ******  operating point information      tnom=  25.000 temp=  25.000          
+ ******  
+ ***** operating point status is all       simulation time is     0.     
+    node    =voltage      node    =voltage      node    =voltage
+
+ +0:d       =   1.0000  0:g1      = 796.8380m 0:g2      = 789.0905m
+ +0:g3      = 780.4510m 0:g4      = 771.8928m 0:g5      = 763.8428m
+
+
+ ****  voltage sources
+
+ subckt                                                                    
+ element  0:vg1      0:vg2      0:vg3      0:vg4      0:vg5      0:vd      
+  volts    796.8380m  789.0905m  780.4510m  771.8928m  763.8428m    1.0000 
+  current    0.         0.         0.         0.         0.      -375.1217u
+  power      0.         0.         0.         0.         0.       375.1217u
+
+     total voltage source power dissipation=  375.1217u       watts
+
+
+
+
+ **** mosfets
+
+
+ subckt                                                         
+ element  0:mn1      0:mn2      0:mn3      0:mn4      0:mn5     
+ model    0:nch214   0:nch214   0:nch214   0:nch214   0:nch214  
+ region     Saturati   Saturati   Saturati   Saturati   Saturati
+  id       105.8310u   82.6686u   69.7003u   61.4088u   55.5129u
+  ibs        0.         0.         0.         0.         0.     
+  ibd        0.         0.         0.         0.         0.     
+  vgs      796.8380m  789.0905m  780.4510m  771.8928m  763.8428m
+  vds        1.0000     1.0000     1.0000     1.0000     1.0000 
+  vbs        0.         0.         0.         0.         0.     
+  vth      599.0589m  601.6155m  596.8380m  589.0905m  580.4510m
+  vdsat    160.1559m  155.2860m  153.6837m  153.6702m  154.3763m
+  vod      197.7791m  187.4750m  183.6130m  182.8023m  183.3918m
+  beta       5.7831m    5.0303m    4.4513m    3.9922m    3.6191m
+  gam eff  894.1238m  894.1238m  894.1238m  894.1238m  894.1238m
+  gm       962.4929u  796.3945u  688.3230u  611.8490u  553.8306u
+  gds       11.7131u    6.4476u    3.8587u    2.4693u    1.6737u
+  gmb      255.1662u  230.6786u  209.5811u  191.7591u  176.5232u
+  cdtot     15.0904f   15.0904f   15.0904f   15.0904f   15.0904f
+  cgtot     19.5147f   21.6404f   23.7622f   25.8811f   27.9964f
+  cstot     37.0701f   39.6281f   42.1379f   44.6106f   47.0542f
+  cbtot     38.3830f   39.2835f   40.1959f   41.1176f   42.0465f
+  cgs       14.2552f   16.2905f   18.2618f   20.1832f   22.0651f
+  cgd        2.2830f    2.3257f    2.3565f    2.3786f    2.3944f
+
+
+
+
+          ***** job concluded
+ ****** HSPICE  --  A-2007.09  32-BIT    (Aug 28 2007) 21:20:44 06/16/2018 winnt
+ ******  
+ * gm*r0 vs. vds                                                                
+  ******  job statistics summary           tnom=  25.000 temp=  25.000          
+ ******  
+
+           total memory used        167 kbytes
+
+  # nodes =       7 # elements=      11
+  # diodes=       0 # bjts    =       0 # jfets   =       0 # mosfets =       5
+  # va device =       0
+
+    analysis           time    # points   tot. iter  conv.iter
+
+    op point           0.02           1           3
+    dc sweep           0.01         331         663
+    readin             0.10
+    errchk             0.01
+    setup              0.01
+    output             0.00
+           total cpu time          0.17 seconds
+               job started at  21:20:44 06/16/2018
+               job ended   at  21:20:44 06/16/2018
+
+
+ Init: hspice initialization file: C:\synopsys\Hspice_A-2007.09\hspice.ini
+  lic: Release hspice token(s) 

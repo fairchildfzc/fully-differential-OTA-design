@@ -1,0 +1,19 @@
+* "simulator" "HSPICE" 
+* "version" "A-2007.09"
+* "format" "HSP"
+* "rundate" "21:20:44 06/16/2018 "
+* "netlist" "c:\users\zichen fan\desktop\gmr0l\nmos\gmr0_nmos.sp "
+* "runtitle" "* gm*r0 vs. vds"
+* time =    0.            
+* temperature =   25.0000        
+*** BEGIN: Saved Operating Point ***                     
+.option 
++ gmindc=   1.0000p       
+.nodeset
++ d =   1.0000        
++ g1 = 796.8380m       
++ g2 = 789.0905m       
++ g3 = 780.4510m       
++ g4 = 771.8928m       
++ g5 = 763.8428m       
+***   END: Saved Operating Point ***                     

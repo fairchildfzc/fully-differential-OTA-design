@@ -1,0 +1,31 @@
+***** HSPICE  --  A-2007.09  32-BIT    (Aug 28 2007) 23:07:39 06/16/2018 winnt
+ Input File: c:\users\zichen fan\desktop\gmidw\pmos\gmidw-pmos.sp
+ lic:
+ lic: FLEXlm: v8.5b
+ lic: USER:   Zichen Fan           HOSTNAME: DESKTOP-V3SQE64
+ lic: HOSTID: "985fd3462180 0205857feb80 985fd346217f 9a5fd346207e 9a5fd346257e"
+ lic: Using FLEXlm license file:
+ lic: C:\synopsys\Hspice_A-2007.09\hspice_2007-09.lic
+ lic: Checkout 1 hspice;  Encryption code: AD47C1C891DA5D596A45
+ lic: License/Maintenance for hspice will expire on 31-dec-2020/2007.9
+ lic: NODE LOCKED license on hostid "985fd3462180 0205857feb80 985fd346217f 9a5f
+ lic:
+ Init: hspice initialization file: C:\synopsys\Hspice_A-2007.09\hspice.ini
+ init: begin read circuit files,  cpu clock=  2.10E-01
+       option post
+       option brief
+ init: end read circuit files,  cpu clock=  2.23E-01 memory=    145 kb
+ init: begin check errors,  cpu clock=  2.23E-01
+ init: end check errors,  cpu clock=  2.26E-01 memory=    148 kb
+ init: begin setup matrix, pivot=    10 cpu clock=  2.26E-01
+       establish matrix -- done,  cpu clock=  2.29E-01 memory=    149 kb
+       re-order matrix -- done,  cpu clock=  2.30E-01 memory=    149 kb
+ init: end setup matrix,  cpu clock=  2.31E-01 memory=    159 kb
+ output: c:\users\zichen fan\desktop\gmidw\pmos\gmidw-pmos.sw0
+ sweep: dc dc0    begin, #sweeps= 173 cpu clock=  2.37E-01
+ sweep: dc dc0    end,  cpu clock=  2.41E-01 memory=    159 kb
+ dcop: begin dcop,  cpu clock=  2.60E-01
+ dcop: end dcop,  cpu clock=  2.90E-01 memory=    159 kb  tot_iter=       4
+>info:         ***** hspice job concluded
+ Init: hspice initialization file: C:\synopsys\Hspice_A-2007.09\hspice.ini
+ lic: Release hspice token(s)
