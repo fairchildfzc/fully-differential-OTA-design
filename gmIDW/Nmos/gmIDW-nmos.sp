@@ -2,9 +2,9 @@ tran loop analysis
 
 .option post brief
 
-.param vt=601.6155m
+.param vt=588.8770m
 
-Mn1 d g 0 0 nch214 L=0.65u W=38u M=5
+Mn1 d g 0 0 nch214 L=0.4u W=10u
 vg g 0 dc 'vt'
 vd d 0 dc 2
 

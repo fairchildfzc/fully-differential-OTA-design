@@ -1,8 +1,8 @@
 * "simulator" "HSPICE" 
 * "version" "A-2007.09"
 * "format" "HSP"
-* "rundate" "22:24:02 06/16/2018 "
-* "netlist" "c:\users\zichen fan\desktop\gmidw\nmos\gmidw-nmos.sp "
+* "rundate" "11:18:24 06/29/2018 "
+* "netlist" "c:\users\zichen fan\desktop\fully-differential-ota-design-master\gmidw\nmos\gmidw-nmos.sp "
 * "runtitle" "tran loop analysis"
 * time =    0.            
 * temperature =   25.0000        
@@ -11,5 +11,5 @@
 + gmindc=   1.0000p       
 .nodeset
 + d =   2.0000        
-+ g = 601.6155m       
++ g = 588.8770m       
 ***   END: Saved Operating Point ***                     

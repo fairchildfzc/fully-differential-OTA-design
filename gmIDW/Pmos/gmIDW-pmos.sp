@@ -2,9 +2,9 @@ tran loop analysis
 
 .option post brief
 
-.param vt=-771.3709m
+.param vt=-805.2867m
 Vdd vdd 0 3
-Mp1 d g vdd vdd pch214 L=0.7u W=10u
+Mp1 d g vdd vdd pch214 L=1.15u W=10u
 vgs g vdd dc 'vt-0.1'
 vds d vdd dc -2.5
 
