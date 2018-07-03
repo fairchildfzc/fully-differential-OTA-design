@@ -7,12 +7,12 @@
 .lib 'ee214_hspice.txt' nominal
 
 * slow corner
-*.lib 'ee214_hspice_slowfast.txt' slow
-*.temp 125
+* .lib 'ee214_hspice_slowfast.txt' slow
+* .temp 125
 
 * fast corner
-*.lib 'ee214_hspice_slowfast.txt' fast
-*.temp 0
+* .lib 'ee214_hspice_slowfast.txt' fast
+* .temp 0
 
 ******************************************************
 *Circuit description
@@ -47,24 +47,24 @@ xt  xp  xm  yp  ym  difflooptest ai='ai' av='av'
 
 .op
 
-* * ac
-* vsd vsd  0
-* .ac dec 10 1e3 10e9
-* .alter
-* .param ai=0 av=1
+* ac
+vsd vsd  0
+.ac dec 10 1e3 10e9
+.alter
+.param ai=0 av=1
 
-* * noise
-* vsd vsd  0  ac
-* .ac dec 100 1e3 100e9
-* .noise v(vod) vsd
+* noise
+vsd vsd  0  ac
+.ac dec 100 1e3 100e9
+.noise v(vod) vsd
 
 * transient
-vsd vsd 0 pulse 0 'input_diff' 0 0.5n 0.5n 100n 200n 
-.tran 0.01n 100n
+* vsd vsd 0 pulse 0 'input_diff' 0 0.5n 0.5n 100n 200n 
+* .tran 0.01n 100n
 
-* * dc
-* vsd vsd  0  0
-* .dc vsd -10.005m 10m 10u
+* dc
+vsd vsd  0  0
+.dc vsd -10.005m 10m 10u
 
 .end
 

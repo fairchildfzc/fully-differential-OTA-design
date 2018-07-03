@@ -13,7 +13,7 @@
 .param input_common=0.83
 
 * differential input voltage step
-.param input_diff=0.8
+.param input_diff=0.85
 ******************************************************
 
 
@@ -23,8 +23,8 @@
 .subckt ota vip vim vop vom vdd 
 
 *ib
-ib vdd pib 0.4m
-m01 pib pib 0 0 nch214 w=400um l=1.1um
+ib vdd pib 0.1075m
+m01 pib pib 0 0 nch214 w=100um l=1.1um
 *Rnoi pib 0 0
 *Cnoi vdd pib 1
 *2nd Branch

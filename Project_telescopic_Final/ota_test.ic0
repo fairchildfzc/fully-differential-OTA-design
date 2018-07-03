@@ -1,8 +1,8 @@
 * "simulator" "HSPICE" 
 * "version" "A-2007.09"
 * "format" "HSP"
-* "rundate" "10:04:41 07/03/2018 "
-* "netlist" "c:\users\zichen fan\desktop\project_telescopic_final\ota_test.sp "
+* "rundate" "03:53:28 07/04/2018 "
+* "netlist" "c:\users\zichen fan\desktop\fully-differential-ota-design\project_telescopic_final\ota_test.sp "
 * "runtitle" "* ee214 design project"
 * time =    0.            
 * temperature =   25.0000        
@@ -11,12 +11,12 @@
 + gmindc=   1.0000p       
 .nodeset
 + vdd =   3.0000        
-+ voc =   1.4568        
-+ vod =   1.1970p       
-+ vom =   1.4568        
-+ vomm =   1.4568        
-+ vop =   1.4568        
-+ vopp =   1.4568        
++ voc =   1.4582        
++ vod =  -1.6396p       
++ vom =   1.4582        
++ vomm =   1.4582        
++ vop =   1.4582        
++ vopp =   1.4582        
 + vsc = 830.0000m       
 + vsd =   0.            
 + vsm = 830.0000m       
@@ -25,23 +25,23 @@
 + xp = 830.0000m       
 + ym = 830.0000m       
 + yp = 830.0000m       
-+ x1.p = 111.5920m       
-+ x1.pb =   2.7914        
-+ x1.pc =   2.7902        
-+ x1.pd =   2.7897        
-+ x1.pe =   2.7902        
-+ x1.pf = 323.1354m       
-+ x1.pg = 323.1354m       
-+ x1.ph = 333.9479m       
-+ x1.pib = 623.4519m       
-+ x1.vbb1 =   1.7539        
-+ x1.vbb2 =   1.0984        
-+ x1.vbias =   2.0058        
-+ x1.vid =   1.1970p       
-+ x1.voc =   1.4568        
++ x1.p = 107.7889m       
++ x1.pb =   2.7837        
++ x1.pc =   2.7825        
++ x1.pd =   2.7819        
++ x1.pe =   2.7825        
++ x1.pf = 327.0078m       
++ x1.pg = 327.0078m       
++ x1.ph = 338.1031m       
++ x1.pib = 628.3136m       
++ x1.vbb1 =   1.7362        
++ x1.vbb2 =   1.1083        
++ x1.vbias =   1.9977        
++ x1.vid =  -1.6396p       
++ x1.voc =   1.4582        
 + x1.vocdes =   1.4500        
-+ xs.vminv =  -1.4568        
++ xs.vminv =  -1.4582        
 + xt.middlem = 830.0000m       
 + xt.middlep = 830.0000m       
-+ x1.x1.vminv =  -1.4568        
++ x1.x1.vminv =  -1.4582        
 ***   END: Saved Operating Point ***                     
