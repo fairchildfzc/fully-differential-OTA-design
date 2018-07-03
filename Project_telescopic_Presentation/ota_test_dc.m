@@ -13,7 +13,7 @@ plot(vod, maxi,'linewidth',2);
 set(gca,'FontSize',14);
 set(gca,'FontName','Arial');
 set(gca,'LineWidth',1.5);
-%axis([-3 3 0 6000]);
+axis([-2 2 0 6000]);
 grid;
 xlabel('V_o_d [V]');
 ylabel('V_o_d/V_s_d [V/V]');

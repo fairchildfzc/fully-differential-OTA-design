@@ -11,7 +11,7 @@ ni    = evalsig(m, 'innoise');
 integ = cumtrapz(f, no);
 integ_sqrt = 1e6*sqrt(integ);
 integ_final = integ_sqrt(end);
-vodpeak = 1.68;
+vodpeak = 1.2;
 DR = 10*log10(0.5*vodpeak^2/integ(end));
 
 % Plot the results
