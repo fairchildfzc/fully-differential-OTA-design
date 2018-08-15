@@ -8,7 +8,7 @@
 
 ## Structure
 * Telescopic
-
+![][circuitstructure.jpg]
 ## Results
 
 
