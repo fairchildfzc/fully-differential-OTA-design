@@ -2,9 +2,9 @@
 
 ## People
 
-* 清华大学 电子系 樊子辰
-* 清华大学 物理系 刘居正
-* 清华大学 微纳电子系 谭淞耀
+* Zichen Fan, EE, Tsinghua University
+* Juzheng Liu, Physics, Tsinghua University
+* Songyao Tan, IME, Tsinghua University
 
 ## Structure
 * Telescopic
@@ -17,3 +17,14 @@
 | Technology      | 0.35um CMOS, Nominal Corner |
 | Operating Temperature     | 25<sup>。</sup>C       |  
 | V<sub>DD</sub> | 3V        |  
+| Power Dissipation | 28.94mW        |  
+| C<sub>L</sub> | 2pF        |  
+| C<sub>s</sub> | 8.5pF        |  
+| C<sub>f</sub> | 4.25pF        |  
+| Current Mirror Ratio | 20        |  
+| CMFB Circuit | Ideal        |  
+| Dynamic Range | 86.16dB        |  
+| Settling Time | 9.68ns        |
+| Static Settling Error | 0.1%        |  
+
+
