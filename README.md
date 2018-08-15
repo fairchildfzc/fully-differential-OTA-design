@@ -8,7 +8,7 @@
 
 ## Structure
 * Telescopic
-![][https://github.com/fairchildfzc/fully-differential-OTA-design/blob/master/circuitstructure.jpg]
+![image][https://github.com/fairchildfzc/fully-differential-OTA-design/blob/master/circuitstructure.jpg]
 ## Results
 
 
