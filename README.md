@@ -2,7 +2,7 @@
 
 ## People
 
-* Zichen Fan, EE, Tsinghua University
+* **Zichen Fan, EE, Tsinghua University**
 * Juzheng Liu, Physics, Tsinghua University
 * Songyao Tan, IME, Tsinghua University
 
