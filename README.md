@@ -15,7 +15,7 @@
 | Parameter  | Specification |
 | :------------: |:---------------:| 
 | Technology      | 0.35um CMOS, Nominal Corner |
-| Operating Temperature     | 25<sup>。</sup>C       |  
+| Operating Temperature     | 25<sup>o</sup>C       |  
 | V<sub>DD</sub> | 3V        |  
 | Power Dissipation | 28.94mW        |  
 | C<sub>L</sub> | 2pF        |  
